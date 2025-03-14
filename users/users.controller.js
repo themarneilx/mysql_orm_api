@@ -18,14 +18,14 @@ module.exports = router;
 // route functons
 
 function getAll(req, res, next) {
-    userService.getAall()
+    userService.getAll()
         .then(users => res.json(users))
         .catch(next);
 }
 
 function getById(req, res, next) {
-    userService.getById(req, params.id)
-        .then(users => res.json(user))
+    userService.getById(req.params.id)
+        .then(users => res.json(users))
         .catch(next);
 }
 
